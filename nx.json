@@ -34,8 +34,21 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/graphql-mesh-sample-e2e/**/*"]
+      "exclude": [
+        "apps/api-gateway-e2e/**/*",
+        "apps/notification-e2e/**/*",
+        "apps/auth-service-e2e/**/*",
+        "apps/account-service-e2e/**/*",
+        "apps/api-gateway-e2e/**/*"
+      ]
     }
   ],
-  "nxCloudAccessToken": "ZWY3NDZjZTItOTBhZC00NjAzLWE0MjctMWE4MmQwMzYzZTM1fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ZWY3NDZjZTItOTBhZC00NjAzLWE0MjctMWE4MmQwMzYzZTM1fHJlYWQtd3JpdGU=",
+  "targetDefaults": {
+    "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }
